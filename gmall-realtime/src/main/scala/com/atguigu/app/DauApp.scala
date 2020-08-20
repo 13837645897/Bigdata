@@ -11,10 +11,10 @@ import com.atguigu.handler.DauHandler
 import com.atguigu.utils.MykafkaUtil
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.kafka.clients.consumer.ConsumerRecord
+import org.apache.phoenix.spark._
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.phoenix.spark._
 
 /**
  * @Author: ypdstart

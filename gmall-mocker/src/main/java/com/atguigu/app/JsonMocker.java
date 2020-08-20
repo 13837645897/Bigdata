@@ -1,5 +1,6 @@
 package com.atguigu.app;
 
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.LogUploader.LogUploader;
@@ -7,6 +8,7 @@ import com.atguigu.utils.RanOpt;
 import com.atguigu.utils.RandomDate;
 import com.atguigu.utils.RandomNum;
 import com.atguigu.utils.RandomOptionGroup;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,7 +34,7 @@ public class JsonMocker {
     };
     private RandomOptionGroup<String> areaOptionGroup = new RandomOptionGroup(areaOpts);
 
-    private String appId = "gmall2020";
+    private String appId = "gmall2019";
 
     private RanOpt[] vsOpts = {new RanOpt("1.2.0", 50), new RanOpt("1.1.2", 15),
             new RanOpt("1.1.3", 30),
@@ -41,7 +43,7 @@ public class JsonMocker {
 
     private RandomOptionGroup<String> vsOptionGroup = new RandomOptionGroup(vsOpts);
 
-    private RanOpt[] eventOpts = {new RanOpt("addFavor", 10), new RanOpt("addComment", 30),new RanOpt("addCart", 20), new RanOpt("clickItem", 40), new RanOpt("coupon", 45)};
+    private RanOpt[] eventOpts = {new RanOpt("addFavor", 10), new RanOpt("addComment", 30), new RanOpt("addCart", 20), new RanOpt("clickItem", 4), new RanOpt("coupon", 85)};
 
     private RandomOptionGroup<String> eventOptionGroup = new RandomOptionGroup(eventOpts);
 
@@ -119,8 +121,8 @@ public class JsonMocker {
              `ts` bigint COMMENT '启动时间', ,
              `area` string COMMENT '城市' */
 
-        String mid = "mid_" + RandomNum.getRandInt(1, 500);
-        String uid = "" + RandomNum.getRandInt(1, 500);
+        String mid = "mid_" + RandomNum.getRandInt(1, 100);
+        String uid = "" + RandomNum.getRandInt(1, 5000);
         String os = osOptionGroup.getRandomOpt().getValue();
         String appid = this.appId;
         String area = areaOptionGroup.getRandomOpt().getValue();
@@ -167,3 +169,4 @@ public class JsonMocker {
     }
 
 }
+
